@@ -17,7 +17,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
   qt5-default \
   qtbase5-dev \
-  libqtav-dev \
   libqt5svg5-dev \
   libqt5websockets5-dev \
   libqt5opengl5-dev \

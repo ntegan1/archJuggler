@@ -22,7 +22,6 @@ jobs:
               sudo apt update && sudo apt -y install \
                 software-properties-common \
                 qtbase5-dev \
-                libqtav-dev \
                 libqt5svg5-dev \
                 libqt5websockets5-dev \
                 libqt5opengl5-dev \
