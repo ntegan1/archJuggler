@@ -6,7 +6,8 @@ env:
   ZIP: |
     cd $GITHUB_WORKSPACE/build/bin
     export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
-    sudo tar -czf $(uname -s)-$(uname -m).tar.gz plotjuggler libDataLoadRlog.* libDataStreamCereal.*
+    test "$(uname)" = "Linux" && sudo tar -czf $(uname -s)-$(uname -m).tar.gz plotjuggler libDataLoadRlog.* libDataStreamCereal.* libPublisherVideoViewer.*
+    test ! "$(uname)" = "Linux" && sudo tar -czf $(uname -s)-$(uname -m).tar.gz plotjuggler libDataLoadRlog.* libDataStreamCereal.*
 
 jobs:
   build_ubuntu:
